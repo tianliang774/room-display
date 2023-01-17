@@ -1,0 +1,24 @@
+.cardblock {
+  background-color: darkgray;
+  padding: 0.2rem;
+}
+.user-information {
+  display: flex;
+  padding-bottom: 0.15rem;
+}
+.user-information-text {
+  margin-left: 0.3rem;
+  display: flex;
+  flex-direction: column;
+}
+.card-content {
+  margin-bottom: 0.5rem;
+  padding-top: 0.3rem;
+  border-top: 1px solid #e5e5e5;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  font-size: 0.2rem;
+}

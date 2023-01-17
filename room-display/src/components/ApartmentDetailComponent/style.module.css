@@ -1,0 +1,112 @@
+.prefix:before {
+  content: '| ';
+}
+
+p {
+  margin: 0.1rem 0rem;
+  font-size: 0.3rem;
+}
+
+.ApartmentDetailHeader {
+  position: relative;
+  background-color: #3e3842;
+  padding: 0.3rem;
+  padding-bottom: 0.7rem;
+  color: white;
+  font-size: 0.4rem;
+}
+
+.postFix {
+  margin: 0.2rem 0;
+  color: white;
+}
+
+.ApartmentDetailHeaderButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.1rem 0.2rem;
+  font-size: 0.3rem;
+  color: #f05203;
+  font-weight: bolder;
+  margin: 0%;
+}
+
+.ApartmentDetailCard {
+  border: 1px solid #efefef;
+  box-shadow: 1px 2px #efefef;
+  background-color: white;
+  box-sizing: border-box;
+  margin: auto;
+  width: 90%;
+  padding: 0rem 0.5rem;
+  transform: translate(0rem, -0.5rem);
+}
+
+.ApartmentDetailCardRight > div {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.ProgressBar {
+  overflow: visible;
+  width: 60%;
+  margin: 0 0.2rem;
+}
+
+.ApartmentDetailFooter {
+  font-size: 0.3rem;
+  position: absolute;
+  z-index: -1;
+  width: 90%;
+  background-color: #fff9f3;
+  color: #ae8f79;
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+  left: 5%;
+  padding: 0.1rem 0.5rem;
+  padding-top: 0.1rem;
+  transform: translate(0rem, -0.6rem);
+}
+
+.ApartmentDetailInformationButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ApartmentDetailInformationButtons > * {
+  width: 40%;
+  margin: 1rem;
+  border: 1px solid #efd6bb;
+  font-weight: 600;
+}
+.ApartmentDetailInformationButtons > *:first-child {
+  color: #f75807;
+}
+.ApartmentDetailInformationButtons > *:last-child {
+  color: white;
+  background-color: #fe5500;
+}
+
+.ApartmentDetailCardLeft {
+  width: 30%;
+  box-sizing: border-box;
+  padding-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 1 auto;
+  border-right: solid 1px #efefef;
+}
+.ApartmentDetailCardRight {
+  box-sizing: border-box;
+  width: 70%;
+  color: #a6a6a6;
+  display: flex;
+  padding-left: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 3 3 auto;
+}

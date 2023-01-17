@@ -1,0 +1,20 @@
+.carousel-component {
+  width: 100%;
+  height: 5rem;
+  cursor: pointer;
+}
+.item-content {
+  width: 100%;
+  height: 5rem;
+  user-select: none;
+}
+.customIndicator {
+  position: absolute;
+  top: 0.15rem;
+  right: 0.15rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.1rem 0.2rem;
+  color: #ffffff;
+  border-radius: 0.1rem;
+  user-select: none;
+}
