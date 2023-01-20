@@ -11,14 +11,16 @@ const RouterBeforeEach = () => {
   useEffect(() => {
     const obj = checkRouterAuth(location.pathname)
     const token = localStorage.getItem('token')
-    console.log("token",token)
-    if (obj && obj.auth && !token) {
-      setAuth(false)
-      navigate('/Login')
+    if (obj && obj.auth) {
+      if (token === "faketoken"){
+      setAuth(false);
+      navigate('/Login');
+      }
+      else{
+        console.log("have token!")
+        setAuth(true);
+      }
     } 
-    else {
-      setAuth(true)
-    }
   }, [])
   return auth ? <Outlet /> : null
 }

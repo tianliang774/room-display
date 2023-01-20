@@ -40,7 +40,7 @@ const LoginForm = () => {
           prompt(err.msg)
         })
     } catch {
-      prompt('填入信息错误，请检查输入')
+      prompt('Error input, please check the information!')
     }
   }
 
@@ -51,7 +51,7 @@ const LoginForm = () => {
         mode="card"
         form={formLog}
         onFinish={submitLog}
-        onFinishFailed={() => prompt('填入信息错误，请重新输入')}
+        onFinishFailed={() => prompt('Error input, please check the information!')}
       >
         <Space
           direction="vertical"
@@ -62,28 +62,25 @@ const LoginForm = () => {
           }}
         >
           <Form.Item
-            label="用户名"
+            label="Username"
             name="username"
             rules={[{ required: true }, { type: 'string', min: 4, max: 12 }]}
           >
             <Input
-              placeholder="请输入用户名"
+              placeholder="Please enter the username"
               clearable
-              style={{
-                '--font-size': '0.5rem',
-              }}
             />
           </Form.Item>
           <Form.Item
-            label="密码"
+            label="Password"
             name="password"
             rules={[{ required: true }, { type: 'string', min: 6, max: 18 }]}
             validateTrigger="onBlur"
           >
-            <Input placeholder="请输入密码" clearable type="password" />
+            <Input placeholder="Please enter the password" clearable type="password" />
           </Form.Item>
           <Button block type="submit" color="primary" size="large">
-            点击登录
+            Click to Login
           </Button>
         </Space>
       </Form>
@@ -223,10 +220,14 @@ const ChangeLabel: FC<Props> = ({ isLogin }) => {
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true)
-  const token = localStorage.getItem('token')
+  const token:string|null = localStorage.getItem('token')
   const navigate = useNavigate()
   useEffect(()=>{
-    if (token){
+    if (token === "faketoken"){
+      console.log("no token!")
+    }
+    else{
+      console.log(token)
       navigate('/MyRoom/RoomActivityPage');
     }
   },[])
@@ -241,10 +242,10 @@ const Login = () => {
     <div className={style.loginContainer}>
       <div className={style.loginTitleContainer}>
         <div className={getClass(isLogin)} onClick={() => setIsLogin(true)}>
-          登录
+          Login
         </div>
         <div className={getClass(!isLogin)} onClick={() => setIsLogin(false)}>
-          注册
+          Register
         </div>
       </div>
       <div className={style.loginFormContainer}>
